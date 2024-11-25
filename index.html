@@ -700,40 +700,56 @@
 
             
 
-  <!-- Popup Form -->
-  <div class="popup-form" id="popupForm">
-    <div class="form-container">
-      <!-- <button class="close-btn" onclick="closePopup()">&times;</button> -->
-      <div class="form-container1">
-       <button class="startbutton" onclick="closePopup()"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7852 0C6.15788 0 0.785156 5.37273 0.785156 12C0.785156 18.6273 6.15788 24 12.7852 24C19.4124 24 24.7852 18.6273 24.7852 12C24.7852 5.37273 19.4124 0 12.7852 0ZM16.8292 9.49854C17.0279 9.2928 17.1378 9.01723 17.1353 8.7312C17.1329 8.44517 17.0181 8.17155 16.8159 7.96929C16.6136 7.76703 16.34 7.6523 16.054 7.64981C15.7679 7.64733 15.4924 7.75728 15.2866 7.956L12.7852 10.4575L10.2837 7.956C10.1831 7.85181 10.0627 7.7687 9.9296 7.71152C9.7965 7.65435 9.65335 7.62426 9.5085 7.623C9.36365 7.62174 9.22 7.64934 9.08593 7.70419C8.95187 7.75905 8.83006 7.84005 8.72764 7.94248C8.62521 8.04491 8.5442 8.16671 8.48935 8.30078C8.4345 8.43485 8.4069 8.5785 8.40816 8.72335C8.40942 8.8682 8.43951 9.01134 8.49668 9.14444C8.55386 9.27754 8.63696 9.39791 8.74116 9.49854L11.2426 12L8.74116 14.5015C8.63696 14.6021 8.55386 14.7225 8.49668 14.8556C8.43951 14.9887 8.40942 15.1318 8.40816 15.2767C8.4069 15.4215 8.4345 15.5652 8.48935 15.6992C8.5442 15.8333 8.62521 15.9551 8.72764 16.0575C8.83006 16.16 8.95187 16.241 9.08593 16.2958C9.22 16.3507 9.36365 16.3783 9.5085 16.377C9.65335 16.3757 9.7965 16.3456 9.9296 16.2885C10.0627 16.2313 10.1831 16.1482 10.2837 16.044L12.7852 13.5425L15.2866 16.044C15.4924 16.2427 15.7679 16.3527 16.054 16.3502C16.34 16.3477 16.6136 16.233 16.8159 16.0307C17.0181 15.8284 17.1329 15.5548 17.1353 15.2688C17.1378 14.9828 17.0279 14.7072 16.8292 14.5015L14.3277 12L16.8292 9.49854Z" fill="black"/>
-        </svg></button>
-       </div>
-      <h2 class="f1-text">Book your appointment now</h2>
-      <p class="f2-text">We can discuss in details. Our team can reach out to you on time and discuss your vision. You will get a response within 24 hours.</p>
-      <form>
-        <label class="f3-text">Full Name</label>
-        <input type="text" placeholder="eg: John Doe">
-        <label class="f3-text">Email</label>
-        <input type="email" placeholder="eg: john@email.com">
-        <label class="f3-text">Phone Number</label>
-        <div>
-          <input type="text" placeholder="+971" style="width: 20%; margin-right: 5px;">
-          <input type="text" placeholder="543210987" style="width: 75%;">
-        </div>
-        <label class="f3-text">Available Date</label>
-        <select>
-          <option>Select</option>
-        </select>
-        <label class="f3-text">Share Your Message</label>
-        <textarea placeholder="Message"></textarea>
-        <button type="submit" class="lastbutton">Book Now</button>
-      </form>
-    </div>
-  </div>
+            <div class="popup-form" id="popupForm">
+                <div class="form-container">
+                  <!-- <button class="close-btn" onclick="closePopup()">&times;</button> -->
+                  <div class="form-container1">
+                   <button class="startbutton" onclick="closePopup()"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7852 0C6.15788 0 0.785156 5.37273 0.785156 12C0.785156 18.6273 6.15788 24 12.7852 24C19.4124 24 24.7852 18.6273 24.7852 12C24.7852 5.37273 19.4124 0 12.7852 0ZM16.8292 9.49854C17.0279 9.2928 17.1378 9.01723 17.1353 8.7312C17.1329 8.44517 17.0181 8.17155 16.8159 7.96929C16.6136 7.76703 16.34 7.6523 16.054 7.64981C15.7679 7.64733 15.4924 7.75728 15.2866 7.956L12.7852 10.4575L10.2837 7.956C10.1831 7.85181 10.0627 7.7687 9.9296 7.71152C9.7965 7.65435 9.65335 7.62426 9.5085 7.623C9.36365 7.62174 9.22 7.64934 9.08593 7.70419C8.95187 7.75905 8.83006 7.84005 8.72764 7.94248C8.62521 8.04491 8.5442 8.16671 8.48935 8.30078C8.4345 8.43485 8.4069 8.5785 8.40816 8.72335C8.40942 8.8682 8.43951 9.01134 8.49668 9.14444C8.55386 9.27754 8.63696 9.39791 8.74116 9.49854L11.2426 12L8.74116 14.5015C8.63696 14.6021 8.55386 14.7225 8.49668 14.8556C8.43951 14.9887 8.40942 15.1318 8.40816 15.2767C8.4069 15.4215 8.4345 15.5652 8.48935 15.6992C8.5442 15.8333 8.62521 15.9551 8.72764 16.0575C8.83006 16.16 8.95187 16.241 9.08593 16.2958C9.22 16.3507 9.36365 16.3783 9.5085 16.377C9.65335 16.3757 9.7965 16.3456 9.9296 16.2885C10.0627 16.2313 10.1831 16.1482 10.2837 16.044L12.7852 13.5425L15.2866 16.044C15.4924 16.2427 15.7679 16.3527 16.054 16.3502C16.34 16.3477 16.6136 16.233 16.8159 16.0307C17.0181 15.8284 17.1329 15.5548 17.1353 15.2688C17.1378 14.9828 17.0279 14.7072 16.8292 14.5015L14.3277 12L16.8292 9.49854Z" fill="black"/>
+                    </svg></button>
+                   </div>
+                  <h2 class="f1-text">Book your appointment now</h2>
+                  <p class="f2-text">We can discuss in details. Our team can reach out to you on time and discuss your vision. You will get a response within 24 hours.</p>
+                  <form>
+                    <label class="f3-text">Full Name</label>
+                    <input type="text" placeholder="eg: John Doe">
+                    <label class="f3-text">Email</label>
+                    <input type="email" placeholder="eg: john@email.com">
+                    <label class="f3-text">Phone Number</label>
+                    <div>
+                      <input type="text" placeholder="+971" style="width: 20%; margin-right: 5px;">
+                      <input type="text" placeholder="543210987" style="width: 77%;">
+                    </div>
+                    <label class="f3-text">Available Date</label>
+                    <div class="custom-select">
+                        <input id="datePicker" class="form-control" placeholder="Select date and time" />
+                       
+                      </div>
+                         <label for="services">Select Service</label>
+            
+                                    <div class="custom-select">
+                                      <select id="services">
+                                        <option value="">Website Development</option>
+                                        <option value="Mobile Application">Mobile Application</option>
+                                        <option value="E-Commerce">E-Commerce</option>
+                                        <option value="Digital Marketing">Digital Marketing</option>
+                                        <option value="UI/UX">UI/UX</option>
+                                        <option value="Custom Application">Custom Application</option>
+                                      </select>
+                                   
+                                      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.266 8.65967L11.6379 15.2878L5.00977 8.65967" stroke="#111827" stroke-width="1.89375" stroke-linecap="round" stroke-linejoin="round" />
+                                      </svg>
+                                   
+                                    </div>
+                    <label class="f3-text">Share Your Message</label>
+                    <textarea placeholder="Message"></textarea>
+                    <button type="submit" class="lastbutton">Book Now</button>
+                  </form>
                 </div>
-            </div>
-
+              </div>
+                            </div>
+                        </div>
 
 
              
@@ -1834,7 +1850,7 @@
         </button>
         <div class="sec17-background">
            
-            <img src="./assets/Background17.svg" alt="Logo 2" />
+            <img src="./assets/Frame348.svg" alt="Logo 2" />
         </div>
         </div>
     
@@ -1924,11 +1940,12 @@
  </div>
  <!-- faq Ends-->
 
- <div id="section14" class="section14" >
+ 
+ <div id="section14" class="section14">
     <div class="sec14-frist">
     <div class="sec14-textcontent">
-    <p class="sec14-text">Get in touch with us.</p>
-    <h2 class="sec14-heading">Here to guide you thoroughly</h2>
+    <p class="sec14-text">Get Started</p>
+    <h2 class="sec14-heading">Get in touch with us <br/> Here to guide you thoroughly</h2>
     </div>
     <div class="sec14-iconcontent">
         <img src="./assets/fb.svg" alt="Logo 2" /> 
@@ -1940,12 +1957,12 @@
 <div class="sec14-formcontainer">
     <form>
         <div class="form-row1">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <input type="tel" placeholder="Mobile Number" required>
+            <input type="text" placeholder=" Name....." required>
+            <input type="email" placeholder="Email Address......" required>
+            <input type="tel" placeholder="Mobile Number......" required>
         </div>
         <div class="form-row1">
-            <textarea placeholder="Leave a message." required></textarea>
+            <textarea placeholder="Leave a Message" required></textarea>
         </div>
         <div class="bnt-sec14">
             <button type="submit" class="submit-btn-14">Leave us a Message →</button>
@@ -2062,7 +2079,31 @@
     <div class="footer-component">
 <div class="logo-container-footer">
     <img src="./assets/logo2.png" alt="Logo 4" />
-    <p class="footer-text">Companies that can help you in develop your website for the future that drive results from today.</p>
+    <p class="footer-text">Companies that can help you in develop your website for the future that drive results from today.</p><br/><br/>
+    <a href="tel:+918050717122" style="text-decoration: none; color: inherit;">
+    <p class="footer-text1">
+
+      
+          <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.542 5.00024C12.7326 5.00024 13.667 5.89724 13.667 8.00024H15.7503C15.7503 4.77524 13.9013 3.00024 10.542 3.00024V5.00024ZM14.1065 10.4432C13.9064 10.2686 13.6434 10.1754 13.373 10.1835C13.1027 10.1915 12.8461 10.3001 12.6576 10.4862L10.1649 12.9472C9.56488 12.8372 8.35863 12.4762 7.11696 11.2872C5.87529 10.0942 5.49925 8.93324 5.38779 8.36124L7.94925 5.96724C8.14343 5.78637 8.25669 5.54006 8.26505 5.28045C8.27341 5.02083 8.17622 4.76828 7.99404 4.57624L4.14509 0.513239C3.96284 0.320596 3.70954 0.203743 3.43899 0.187499C3.16845 0.171254 2.90196 0.256897 2.69613 0.426239L0.435711 2.28724C0.255618 2.46075 0.148127 2.69169 0.133627 2.93624C0.118002 3.18624 -0.179914 9.10824 4.60342 13.7022C8.77633 17.7072 14.0034 18.0002 15.443 18.0002C15.6534 18.0002 15.7826 17.9942 15.817 17.9922C16.0717 17.9786 16.3121 17.8749 16.492 17.7012L18.4295 15.5302C18.606 15.3328 18.6954 15.077 18.6786 14.8173C18.6619 14.5576 18.5404 14.3143 18.3399 14.1392L14.1065 10.4432Z" fill="white"/>
+          </svg>
+          +91 8050717122
+       </p></a> <br/>
+       <a href="mailto:business@seeckneo.com" style="text-decoration: none; color: inherit;">
+       <p class="footer-text1">
+     
+          <svg width="20" height="15" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.8333 0H0V16H20.8333V0ZM18.75 4L10.4167 9L2.08333 4V2L10.4167 7L18.75 2V4Z" fill="white"/>
+          </svg>
+          business@seeckneo.com
+      
+      </p>  </a><br/>  
+      <a href="mailto:business@seeckneo.com" style="text-decoration: none; color: inherit;">
+          <p class="footer-text">
+            <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.8333 0H0V16H20.8333V0ZM18.75 4L10.4167 9L2.08333 4V2L10.4167 7L18.75 2V4Z" fill="white"/>
+            </svg>
+             info@seeckneo.com </p>   </a>     
 </div>
 <div class="logo-container-footer1">
     <h6 class="footer-heading">Quick links</h6>
@@ -2077,40 +2118,48 @@
         <p class="footer-text1">Content creation</p>
         </div>
         <div class="logo-container-footer1">
-            <h6 class="footer-heading">Policies</h6>
-            <p class="footer-text1">Privacy Policy</p>
-            <p class="footer-text1">Web Development</p>
-            <p class="footer-text1">Cookie Policy</p>
+            <h6 class="footer-heading">Address</h6>
+            <p class="footer-text1">#286, rajesh complex Trux Space Mahaganapathi nagar,6th phase 1st stage, Rajaji Nagar Industrial Town 
+                Bengalure Karnataka-560044</p>
+            <p class="footer-text1"></p>
+            <p class="footer-text1"></p>
             </div>
     </div> 
     <div class="footer-last-sec16">
-        <p class="footer-last-text"> © 2023 Seekneo. All rights reserved.</p>
+       
         <div class="fotter-last-icon">
+            <a href="https://www.instagram.com/seekneoitsolutions/" target="_blank" rel="noopener noreferrer">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11.999 7.37695C10.7726 7.37695 9.59651 7.86412 8.72934 8.73129C7.86217 9.59846 7.375 10.7746 7.375 12.001C7.375 13.2273 7.86217 14.4034 8.72934 15.2706C9.59651 16.1378 10.7726 16.625 11.999 16.625C13.2254 16.625 14.4015 16.1378 15.2687 15.2706C16.1358 14.4034 16.623 13.2273 16.623 12.001C16.623 10.7746 16.1358 9.59846 15.2687 8.73129C14.4015 7.86412 13.2254 7.37695 11.999 7.37695ZM11.999 15.004C11.2023 15.004 10.4382 14.6875 9.87485 14.1241C9.31149 13.5607 8.995 12.7967 8.995 12C8.995 11.2032 9.31149 10.4392 9.87485 9.8758C10.4382 9.31245 11.2023 8.99595 11.999 8.99595C12.7957 8.99595 13.5598 9.31245 14.1231 9.8758C14.6865 10.4392 15.003 11.2032 15.003 12C15.003 12.7967 14.6865 13.5607 14.1231 14.1241C13.5598 14.6875 12.7957 15.004 11.999 15.004Z" fill="white"/>
                 <path d="M16.8046 8.28491C17.3999 8.28491 17.8826 7.80227 17.8826 7.20691C17.8826 6.61154 17.3999 6.12891 16.8046 6.12891C16.2092 6.12891 15.7266 6.61154 15.7266 7.20691C15.7266 7.80227 16.2092 8.28491 16.8046 8.28491Z" fill="white"/>
                 <path d="M20.5349 6.10991C20.3034 5.51209 19.9496 4.96919 19.4962 4.51596C19.0428 4.06274 18.4998 3.70918 17.9019 3.47791C17.2022 3.21526 16.4631 3.07325 15.7159 3.05791C14.7529 3.01591 14.4479 3.00391 12.0059 3.00391C9.56391 3.00391 9.25091 3.00391 8.29591 3.05791C7.54929 3.07246 6.81066 3.21451 6.11191 3.47791C5.51384 3.70891 4.97067 4.06238 4.51724 4.51563C4.06381 4.96889 3.71013 5.51193 3.47891 6.10991C3.21621 6.80952 3.07452 7.54874 3.05991 8.29591C3.01691 9.25791 3.00391 9.56291 3.00391 12.0059C3.00391 14.4479 3.00391 14.7589 3.05991 15.7159C3.07491 16.4639 3.21591 17.2019 3.47891 17.9029C3.71078 18.5007 4.0648 19.0435 4.51834 19.4967C4.97188 19.9499 5.51497 20.3035 6.11291 20.5349C6.81034 20.8081 7.54928 20.9603 8.29791 20.9849C9.26091 21.0269 9.56591 21.0399 12.0079 21.0399C14.4499 21.0399 14.7629 21.0399 15.7179 20.9849C16.465 20.9697 17.2041 20.828 17.9039 20.5659C18.5017 20.3341 19.0445 19.9802 19.4979 19.5269C19.9512 19.0735 20.3051 18.5307 20.5369 17.9329C20.7999 17.2329 20.9409 16.4949 20.9559 15.7469C20.9989 14.7849 21.0119 14.4799 21.0119 12.0369C21.0119 9.59391 21.0119 9.28391 20.9559 8.32691C20.9443 7.56918 20.8018 6.81915 20.5349 6.10991ZM19.3169 15.6419C19.3105 16.2182 19.2053 16.7891 19.0059 17.3299C18.8557 17.7188 18.6258 18.0719 18.331 18.3666C18.0361 18.6613 17.6829 18.891 17.2939 19.0409C16.7591 19.2394 16.1943 19.3445 15.6239 19.3519C14.6739 19.3959 14.4059 19.4069 11.9699 19.4069C9.53191 19.4069 9.28291 19.4069 8.31491 19.3519C7.74483 19.3449 7.18023 19.2397 6.64591 19.0409C6.25559 18.8919 5.90091 18.6626 5.6048 18.3679C5.30868 18.0731 5.07774 17.7195 4.92691 17.3299C4.73035 16.795 4.62522 16.2307 4.61591 15.6609C4.57291 14.7109 4.56291 14.4429 4.56291 12.0069C4.56291 9.56991 4.56291 9.32091 4.61591 8.35191C4.62237 7.77593 4.72756 7.20533 4.92691 6.66491C5.23191 5.87591 5.85691 5.25491 6.64591 4.95291C7.1805 4.75505 7.74493 4.64987 8.31491 4.64191C9.26591 4.59891 9.53291 4.58691 11.9699 4.58691C14.4069 4.58691 14.6569 4.58691 15.6239 4.64191C16.1943 4.64877 16.7593 4.75398 17.2939 4.95291C17.6828 5.10318 18.036 5.33311 18.3309 5.62794C18.6257 5.92276 18.8556 6.27598 19.0059 6.66491C19.2025 7.19986 19.3076 7.76407 19.3169 8.33391C19.3599 9.28491 19.3709 9.55191 19.3709 11.9889C19.3709 14.4249 19.3709 14.6869 19.3279 15.6429H19.3169V15.6419Z" fill="white"/>
                 </svg>
-                
+            </a>
+            <a href="https://wa.me/918050717122" target="_blank" style="text-decoration: none;">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M18.1542 4.11836C16.3772 2.33711 14.0107 1.35742 11.4958 1.35742C6.30469 1.35742 2.08058 5.58153 2.08058 10.7726C2.08058 12.4309 2.51317 14.0509 3.33594 15.4802L2 20.3574L6.99174 19.0469C8.36585 19.7976 9.91384 20.192 11.4915 20.192H11.4958C16.6826 20.192 21 15.9679 21 10.7768C21 8.26189 19.9312 5.89961 18.1542 4.11836ZM11.4958 18.6059C10.0877 18.6059 8.70937 18.2284 7.50915 17.5159L7.225 17.3463L4.26473 18.1224L5.05357 15.2342L4.86696 14.9373C4.08237 13.6905 3.67098 12.2527 3.67098 10.7726C3.67098 6.45943 7.18259 2.94782 11.5 2.94782C13.5908 2.94782 15.5545 3.76211 17.0304 5.24224C18.5062 6.72238 19.4138 8.68599 19.4096 10.7768C19.4096 15.0943 15.8089 18.6059 11.4958 18.6059ZM15.7877 12.7447C15.5545 12.6259 14.3967 12.0576 14.1804 11.9813C13.9641 11.9007 13.8071 11.8626 13.6502 12.1001C13.4933 12.3376 13.0437 12.8634 12.9038 13.0246C12.7681 13.1815 12.6281 13.2027 12.3949 13.084C11.0123 12.3927 10.1047 11.8498 9.19286 10.2849C8.95112 9.86925 9.4346 9.89894 9.88415 8.99983C9.96049 8.84291 9.92232 8.7072 9.86295 8.58845C9.80357 8.4697 9.33281 7.31189 9.13772 6.84113C8.94688 6.38309 8.75179 6.44671 8.60759 6.43823C8.47187 6.42974 8.31495 6.42974 8.15804 6.42974C8.00112 6.42974 7.74665 6.48912 7.53036 6.72238C7.31406 6.95988 6.70759 7.52818 6.70759 8.68599C6.70759 9.84381 7.55156 10.9634 7.66607 11.1204C7.78482 11.2773 9.32433 13.6523 11.6866 14.6744C13.1795 15.319 13.7647 15.3742 14.5112 15.2639C14.965 15.196 15.9022 14.6956 16.0973 14.1443C16.2924 13.5929 16.2924 13.1222 16.233 13.0246C16.1779 12.9186 16.021 12.8592 15.7877 12.7447Z" fill="white"/>
     </svg>
-    
+    </a>
+    <a href="https://www.linkedin.com/company/seekneo-it-solutions" target="_blank" rel="noopener noreferrer">  
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M9.429 8.969H13.143V10.819C13.678 9.755 15.05 8.799 17.111 8.799C21.062 8.799 22 10.917 22 14.803V22H18V15.688C18 13.475 17.465 12.227 16.103 12.227C14.214 12.227 13.429 13.572 13.429 15.687V22H9.429V8.969ZM2.57 21.83H6.57V8.799H2.57V21.83ZM7.143 4.55C7.14315 4.88528 7.07666 5.21724 6.94739 5.52659C6.81812 5.83594 6.62865 6.11651 6.39 6.352C5.9064 6.83262 5.25181 7.10165 4.57 7.1C3.88939 7.09954 3.23631 6.8312 2.752 6.353C2.51421 6.11671 2.32539 5.83582 2.19634 5.52643C2.0673 5.21704 2.00058 4.88522 2 4.55C2 3.873 2.27 3.225 2.753 2.747C3.23689 2.26816 3.89024 1.9997 4.571 2C5.253 2 5.907 2.269 6.39 2.747C6.872 3.225 7.143 3.873 7.143 4.55Z" fill="white"/>
     </svg>
+    </a>
 
-    
+    <a href="https://x.com/i/flow/login?redirect_after_login=%2Fseekneoit" target="_blank" rel="noopener noreferrer">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M22 5.01242C21.2511 5.35943 20.4567 5.58721 19.6433 5.68818C20.4905 5.15705 21.1411 4.31598 21.4474 3.31386C20.642 3.81376 19.7608 4.16598 18.8419 4.35529C18.0934 3.52125 17.027 3 15.8468 3C13.5807 3 11.7434 4.92156 11.7434 7.29155C11.7434 7.62796 11.7798 7.95547 11.8497 8.26965C8.43953 8.09062 5.41609 6.38209 3.39227 3.78559C3.03914 4.41943 2.8368 5.15673 2.8368 5.94313C2.8368 7.4321 3.56125 8.74563 4.66219 9.51528C4.01059 9.49394 3.37332 9.30986 2.80359 8.97843C2.80336 8.99641 2.80336 9.01438 2.80336 9.03244C2.80336 11.1118 4.21773 12.8464 6.09477 13.2406C5.49054 13.4125 4.85674 13.4377 4.2418 13.3142C4.76391 15.0192 6.2793 16.2599 8.07477 16.2947C6.67047 17.4457 4.90117 18.1318 2.97883 18.1318C2.64758 18.1318 2.32102 18.1115 2 18.0718C3.81586 19.2895 5.97266 20 8.28984 20C15.8373 20 19.9644 13.4605 19.9644 7.78926C19.9644 7.60312 19.9605 7.41804 19.9525 7.23403C20.7558 6.62664 21.4492 5.87434 22 5.01242Z" fill="white"/>
     </svg>
-    
+    </a>
     
         </div>
+        <p class="footer-last-text"> © 2023 Seekneo. All rights reserved.</p>
+        <div></div>
     </div> 
+   
 </div>
 
- </div> 
+ </div>
 
 
  <script>
