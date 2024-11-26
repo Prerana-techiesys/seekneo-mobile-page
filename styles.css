@@ -317,6 +317,193 @@ gap: 10px;
     color: #E3E3E3;
   }
   
+
+
+  .stat:not(:last-child) {
+    margin-right: 30px;
+  }
+  .formcontainer {
+    background-color: #f9fbff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+  }
+  .form-print{
+justify-content: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+  }
+  
+  .form-heading {
+    color: #0F68EA;
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    line-height: 40px;
+    font-family: Inter Tight;
+  }
+  
+  .form-text {
+    color: #111827;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-family: Inter Tight;
+    font-weight: 500;
+    line-height: 17.5px;
+    text-align: center;
+    width: 534px;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    
+    text-align: left;
+  }
+  .form-1more{
+    display: flex;
+    justify-content: space-between;
+   gap: 20px;
+    flex-direction: column;
+    text-align: left;
+    width: 48%;
+
+  }
+  
+  .form-group {
+    flex-basis: 48%;
+ 
+  }
+  
+  label { 
+    margin-bottom: 5px;
+  font-size:14px ;
+  font-family: Inter Tight;
+  line-height: 21px;
+  font-weight: 700;
+  
+  }
+  
+  input,  select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #F6F9FF;
+    border-radius: 8px;
+    background-color: #EEF4FF;
+    font-size: 17.68px;
+    font-family: Inter Tight;
+    font-weight: 500;
+    color: #313131;
+    
+  }
+  
+  .phone-input {
+    display: flex;
+ 
+ 
+    border: 1px solid #F6F9FF;
+    border-radius: 8px;
+    background-color: #EEF4FF;
+  }
+  .phone-input select{
+border: none;
+border-radius: 8px;
+border: 1px solid #F6F9FF;
+background-color: transparent;
+width: 90px;
+color: #000000;
+
+  }
+  .form-group select{
+    color: #000000;
+
+  }
+  .custom-select {
+    position: relative;
+    display: flex;
+    align-items: center;
+   
+}
+.custom-select1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+   
+}
+.custom-select select {
+    appearance: none;
+}
+.custom-select svg {
+    position: absolute;
+    right: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 10px;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+
+  
+ 
+  
+  textarea {
+    resize: none;
+    height: 145px;
+  }
+  
+  .btn-submit {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+
+
+  }
+  
+  .btn-submit:hover {
+    background-color: #0056b3;
+  }
+  .two-btn{
+    margin-top: 2rem;
+    display: flex;
+    gap: 30px;
+  }
+  .btn-two{
+  
+  border-radius: 30px;
+  justify-content: right;
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 20px;
+  border: none;
+  background-color: #F0F2F4;
+  color: black;
+  }
+  .ptag{
+    padding-left: 40px;
+  }
+  .line{
+    width: 100%;
+    margin-top: 1.5rem;
+    height: 4px;
+    background-color: white;
+  }
   /* form start */
 
 
@@ -1302,6 +1489,7 @@ border-radius: 20px;
     font-size: 16px;
     color: #16121E;
     margin-top: 2rem;
+    cursor: pointer;
 }
 
 @-webkit-keyframes scrolla {
@@ -2499,8 +2687,8 @@ height: 100%;
     .sec10-con-heading{
         font-family: Inter Tight;
         font-weight: 600;
-        font-size: 52px;
-        line-height: 64.8px;
+        font-size: 72px;
+        line-height: 84.8px;
         text-align: center;
         color: #FFFFFF;
        
@@ -2527,7 +2715,7 @@ height: 100%;
         margin-bottom: 2rem;
         width: 488px;
     }
-    .sec10-btn-two{
+    .sec10-btn-two , .sec10-btn-two1{
       
         border-radius: 30px;
         justify-content: right;
@@ -3732,10 +3920,10 @@ color: #000;
     flex-direction: column;
     justify-content: space-between;
     
-    border-radius: 80px;
+    border-radius: 60px;
     background-color: #D7E7FF;
     padding: 20px 30px;
-    gap: 20px;
+    gap: 5px;
     }
     .content{
       display: flex;
@@ -3769,15 +3957,16 @@ color: #000;
             color: #000000;
             font-family: Inter Tight;
             font-weight: 500;
+            line-height: 20px;
             }
             .aligned{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                border-radius: 80px;
+                border-radius: 20px;
                 background-color: #D7E7FF;
                 padding: 20px 30px;
-                gap: 80px;
+                gap: 5px;
                
                 }
                 .service-title{
@@ -3788,7 +3977,10 @@ color: #000;
                     gap: 10px;
                     padding-top: 20px;
                     }
-                    
+                    .answer{
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
     }
  @media (max-width:559px) {
     .question{
@@ -4157,7 +4349,7 @@ width: 583px;
     align-items: center;
     width: 85%;
     margin-top: 4rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
   .fotter-last-icon{
     display: flex;
@@ -4537,7 +4729,7 @@ height: 50px;
     flex-direction: column;
     align-items: center;
     width: 100%;
-background-image: url('assets/19thds.svg');
+background-image: url('assets/sdsa123.svg');
 background-size:100%;
 background-position: center;
 background-repeat: no-repeat; 
@@ -4958,6 +5150,7 @@ margin-top: 10px;
 
 
 
+
     .popup-form {
         display: none;
         position: fixed;
@@ -4972,13 +5165,21 @@ margin-top: 10px;
         overflow-y: auto;
       }
       .form-container {
-        background: linear-gradient(to bottom, #1e3a8a, #2563eb);
+        background: linear-gradient(to bottom, #435074eb, #1b346c);
         padding: 20px;
         border-radius: 10px;
         width: 500px;
-        height: 730px;
+        height: 720px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     
         color: #fff;
+      }
+      .tetsion{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
       }
     
       /* .form-container {
@@ -5042,6 +5243,10 @@ margin-top: 10px;
     
     
       }
+      .select3{
+        
+       
+      }
       
     
       .form-container input, .form-container select, .form-container textarea {
@@ -5056,15 +5261,25 @@ margin-top: 10px;
         display: flex; /* Enable flex layout for the container */
         justify-content: flex-end; /* Push items to the right */
     }
+    .pop-up-button{
+        justify-content: center;
+        display: flex;
+        align-content: center;
+    }
       .lastbutton {
         display: block;
-          width: 100%;
+          width: 120px;
           background-color: #007BFF;
           color: #fff;
           border: none;
           padding: 10px;
-          border-radius: 5px;
+          border-radius: 25px;
           cursor: pointer;
+          justify-content: center;
+        display: flex;
+        align-content: center;
+        gap: 10px;
+       
       
       }
       .startbutton{
@@ -5093,11 +5308,9 @@ margin-top: 10px;
       }
       @media (max-width:553px) {
         .form-container {
-            background: linear-gradient(to bottom, #1e3a8a, #2563eb);
             padding: 20px;
-            border-radius: 10px;
             width: 90%;
-            color: #fff;
+            height: 780px;
           }
           .f1-text{
             margin-bottom: 10px;
@@ -5133,3 +5346,259 @@ margin-top: 10px;
     
     
     
+    
+    
+    
+    
+    
+      .icons-container {
+        color: white;
+        /* height: 100%; */
+        /* width: 100%; */
+        /* background-color: blue; */
+        position: fixed; /* Fixes the element relative to the viewport */
+        top: 80vh; /* Optional: Ensures it starts from the top of the viewport */
+        left: 30px; /* Optional: Ensures it starts from the left of the viewport */
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        
+    }
+    
+    /* .icons-container {
+        position: relative;
+        width: fit-content;
+    } */
+    
+    
+    .station {
+        /* position: relative; */
+      /* background-color: red; */
+    }
+    
+    .main-icon {
+        width: 50px; /* Adjust as needed */
+        height: auto;
+        cursor: pointer;
+        padding: 10px ;
+        background: rgb(77,77,91);
+        background: linear-gradient(180deg, rgba(77,77,91,1) 32%, rgba(28,23,19,1) 91%);
+        border-radius: 10px;
+        border:1px solid red ;
+       margin-top: 5px;
+    }
+    
+    .social-icons {
+        position: absolute;
+        bottom: 100%; /* Place icons above the main icon */
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column; /* Stack icons vertically */
+        /* align-items: center; */
+      
+       
+     
+    }
+    
+    
+    .social-icon {
+        cursor: pointer;
+        margin-top: 5px;
+        width: 50px; /* Adjust as needed */
+        height: auto;
+        opacity: 0; 
+       
+        transition: opacity 0.3s ease, transform 0.3s ease; 
+        background: rgb(77,77,91);
+        background: linear-gradient(180deg, rgb(39, 39, 46) 32%, rgba(28,23,19,1) 91%);
+       padding: 10px ;
+       border-radius: 10px;
+       border:1px solid red ;
+    }
+    
+    .station:hover .social-icon:nth-child(1) {
+        animation: show-icon 0.3s forwards 0.1s; /* Facebook icon */
+    }
+    
+    .station:hover .social-icon:nth-child(2) {
+        animation: show-icon 0.3s forwards 0.1s; /* Instagram icon */
+    }
+    
+    @keyframes show-icon {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @media (max-width:453px) {
+        .icons-container {
+            left: 10px; 
+            
+        }
+    }
+    /* @media (max-width:1028px) {
+        .social-icon {
+            opacity: 1;
+        }
+    } */
+    
+    
+    
+    
+    .enquiry-container{
+        color: white;
+        position: fixed; /* Fixes the element relative to the viewport */
+        top: 35vh; /* Optional: Ensures it starts from the top of the viewport */
+        right: 0px; /* Optional: Ensures it starts from the left of the viewport */
+        display: flex;
+        justify-content: left;
+        align-items: center; 
+        cursor: pointer;
+       
+    }
+    
+    .state{
+        background-color: rgb(255, 255, 255);
+        padding: 4px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        border-radius: 10px;
+        transition: background-color 0.5s ease; /* Smooth transition effect */
+    }
+    .state:hover {
+        background-color: rgb(0, 0, 0); /* Change this to your desired hover color */
+    }
+    .enquiry-popup {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 15%;
+        right: 1%;
+        transform: translateX(100%); /* Start off the screen */
+       
+        width: 100%;
+        max-width: 400px;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.719);
+        border-radius: 10px;
+        z-index: 1000;
+        padding: 20px;
+        animation: slideIn 0.5s ease forwards; /* Add the animation */
+    }
+    
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
+    /* Keyframes for the sliding animation */
+    @keyframes slideIn {
+        0% {
+            transform: translateX(100%); /* Start off the screen */
+        }
+        100% {
+            transform: translateX(0); /* Move into position */
+        }
+    }
+    
+    .popup-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    
+    .popup-header h3 {
+        margin: 0;
+    }
+    
+    .close-btn {
+        background: none;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    
+    /* General styles for all form inputs */
+    .form-input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        color: #000;
+    }
+    
+    /* Specific styles for the name input */
+    .name-input {
+        background-color: #f9f9f9;
+    }
+    
+    /* Specific styles for the email input */
+    .email-input {
+        border-color: #28a745;
+    }
+    
+    
+    .phone-input {
+      
+        color: #000;
+    }
+    
+    /* Styles for the select dropdown */
+    .form-select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        color: black;
+    }
+    
+    /* Styles for the submit button */
+    .form-button {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    .submit-button {
+        background-color: #113f26; /* Specific color for this button */
+        transition: background-color 0.3s;
+        width: 100%;
+    }
+    
+    .submit-button:hover {
+        background-color: #285e3b;
+    }
+    
+    /* To hide and show the popup */
+    .hidden {
+        display: none;
+    }
+    
+    .visible {
+        display: block;
+    }
+    
+    @media (max-width:403px) {
+        .enquiry-popup {
+            right: 0%;
+        }
+    }

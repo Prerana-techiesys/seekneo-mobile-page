@@ -16,6 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
     <div class="container">
@@ -93,16 +94,15 @@
                   <input type="text" id="name" placeholder="eg: John Doe" />
                 </div>
                 <div class="form-group">
-                  <label for="date">Available Date</label>
-                  <div class="custom-select">
-                  <select id="date">
-
-                    <option>Select</option>
-                  </select>
-                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.266 8.65967L11.6379 15.2878L5.00977 8.65967" stroke="#111827" stroke-width="1.89375" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                  </div>
+                    <label for="date">Available Date</label>
+                    <div class="custom-select">
+                        <input id="datePicker" class="form-control" placeholder="Select date and time" />
+                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); pointer-events: none;">
+                        <path d="M18.266 8.65967L11.6379 15.2878L5.00977 8.65967" stroke="#111827"
+                          stroke-width="1.89375" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
                 </div>
               </div>
               
@@ -123,13 +123,33 @@
                                 <option>+44</option>
                                 <option>+91</option>
                             </select>
-                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.266 8.65967L11.6379 15.2878L5.00977 8.65967" stroke="#111827" stroke-width="1.89375" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); pointer-events: none;">
+                            <path d="M18.266 8.65967L11.6379 15.2878L5.00977 8.65967" stroke="#111827"
+                              stroke-width="1.89375" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
                         </div>
                       <input type="text" id="phone" placeholder="543210987" />
                     </div>
                   </div>
+                  <div class="form-group">
+                    <label for="services">Select Service</label>
+                    <div class="custom-select">
+                        <select id="services">
+                            <option value="">Mobile Application</option>
+                            <option value="Mobile Application">Website Development</option>
+                            <option value="E-Commerce">E-Commerce</option>
+                            <option value="Digital Marketing">Digital Marketing</option>
+                            <option value="UI/UX">UI/UX</option>
+                            <option value="Custom Application">Custom Application</option>
+                        </select>
+                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); pointer-events: none;">
+                        <path d="M18.266 8.65967L11.6379 15.2878L5.00977 8.65967" stroke="#111827"
+                          stroke-width="1.89375" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                </div>
                 </div>
                 <div class="form-group">
                   <label for="message">Share Your Message</label>
@@ -638,7 +658,7 @@
             <p class="sec4-text">Seekneo creates instinctive mobile applications that appeal to the
                 users and build a strong connection to make them engage constantly.
                 The Responsive designs intensify user engagement and interaction. </p>
-            <button class="btn-sec4"  onclick="openPopup()">Enquire Now <img src="./assets/arrow2.svg" alt="Logo 2" /></button>
+            <button class="btn-sec4" >Enquire Now <img src="./assets/arrow2.svg" alt="Logo 2" /></button>
             <div class="wrapper4">
                 <div class="slider4">
                     <div class="slidetrack4">
@@ -700,57 +720,91 @@
 
             
 
-            <div class="popup-form" id="popupForm">
-                <div class="form-container">
-                  <!-- <button class="close-btn" onclick="closePopup()">&times;</button> -->
-                  <div class="form-container1">
-                   <button class="startbutton" onclick="closePopup()"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7852 0C6.15788 0 0.785156 5.37273 0.785156 12C0.785156 18.6273 6.15788 24 12.7852 24C19.4124 24 24.7852 18.6273 24.7852 12C24.7852 5.37273 19.4124 0 12.7852 0ZM16.8292 9.49854C17.0279 9.2928 17.1378 9.01723 17.1353 8.7312C17.1329 8.44517 17.0181 8.17155 16.8159 7.96929C16.6136 7.76703 16.34 7.6523 16.054 7.64981C15.7679 7.64733 15.4924 7.75728 15.2866 7.956L12.7852 10.4575L10.2837 7.956C10.1831 7.85181 10.0627 7.7687 9.9296 7.71152C9.7965 7.65435 9.65335 7.62426 9.5085 7.623C9.36365 7.62174 9.22 7.64934 9.08593 7.70419C8.95187 7.75905 8.83006 7.84005 8.72764 7.94248C8.62521 8.04491 8.5442 8.16671 8.48935 8.30078C8.4345 8.43485 8.4069 8.5785 8.40816 8.72335C8.40942 8.8682 8.43951 9.01134 8.49668 9.14444C8.55386 9.27754 8.63696 9.39791 8.74116 9.49854L11.2426 12L8.74116 14.5015C8.63696 14.6021 8.55386 14.7225 8.49668 14.8556C8.43951 14.9887 8.40942 15.1318 8.40816 15.2767C8.4069 15.4215 8.4345 15.5652 8.48935 15.6992C8.5442 15.8333 8.62521 15.9551 8.72764 16.0575C8.83006 16.16 8.95187 16.241 9.08593 16.2958C9.22 16.3507 9.36365 16.3783 9.5085 16.377C9.65335 16.3757 9.7965 16.3456 9.9296 16.2885C10.0627 16.2313 10.1831 16.1482 10.2837 16.044L12.7852 13.5425L15.2866 16.044C15.4924 16.2427 15.7679 16.3527 16.054 16.3502C16.34 16.3477 16.6136 16.233 16.8159 16.0307C17.0181 15.8284 17.1329 15.5548 17.1353 15.2688C17.1378 14.9828 17.0279 14.7072 16.8292 14.5015L14.3277 12L16.8292 9.49854Z" fill="black"/>
-                    </svg></button>
-                   </div>
-                  <h2 class="f1-text">Book your appointment now</h2>
-                  <p class="f2-text">We can discuss in details. Our team can reach out to you on time and discuss your vision. You will get a response within 24 hours.</p>
-                  <form>
+           <!-- Popup Form -->
+           <div class="popup-form" id="popupForm">
+            <div class="form-container">
+                <!-- <button class="close-btn" onclick="closePopup()">&times;</button> -->
+                <div class="form-container1">
+                    <button class="startbutton" onclick="closePopup()"><svg width="25" height="24"
+                            viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12.7852 0C6.15788 0 0.785156 5.37273 0.785156 12C0.785156 18.6273 6.15788 24 12.7852 24C19.4124 24 24.7852 18.6273 24.7852 12C24.7852 5.37273 19.4124 0 12.7852 0ZM16.8292 9.49854C17.0279 9.2928 17.1378 9.01723 17.1353 8.7312C17.1329 8.44517 17.0181 8.17155 16.8159 7.96929C16.6136 7.76703 16.34 7.6523 16.054 7.64981C15.7679 7.64733 15.4924 7.75728 15.2866 7.956L12.7852 10.4575L10.2837 7.956C10.1831 7.85181 10.0627 7.7687 9.9296 7.71152C9.7965 7.65435 9.65335 7.62426 9.5085 7.623C9.36365 7.62174 9.22 7.64934 9.08593 7.70419C8.95187 7.75905 8.83006 7.84005 8.72764 7.94248C8.62521 8.04491 8.5442 8.16671 8.48935 8.30078C8.4345 8.43485 8.4069 8.5785 8.40816 8.72335C8.40942 8.8682 8.43951 9.01134 8.49668 9.14444C8.55386 9.27754 8.63696 9.39791 8.74116 9.49854L11.2426 12L8.74116 14.5015C8.63696 14.6021 8.55386 14.7225 8.49668 14.8556C8.43951 14.9887 8.40942 15.1318 8.40816 15.2767C8.4069 15.4215 8.4345 15.5652 8.48935 15.6992C8.5442 15.8333 8.62521 15.9551 8.72764 16.0575C8.83006 16.16 8.95187 16.241 9.08593 16.2958C9.22 16.3507 9.36365 16.3783 9.5085 16.377C9.65335 16.3757 9.7965 16.3456 9.9296 16.2885C10.0627 16.2313 10.1831 16.1482 10.2837 16.044L12.7852 13.5425L15.2866 16.044C15.4924 16.2427 15.7679 16.3527 16.054 16.3502C16.34 16.3477 16.6136 16.233 16.8159 16.0307C17.0181 15.8284 17.1329 15.5548 17.1353 15.2688C17.1378 14.9828 17.0279 14.7072 16.8292 14.5015L14.3277 12L16.8292 9.49854Z"
+                                fill="black" />
+                        </svg></button>
+                </div>
+                <h2 class="f1-text">Book your appointment now</h2>
+                <p class="f2-text">We can discuss in details. Our team can reach out to you on time and
+                    discuss your vision. You will get a response within 24 hours.</p>
+                <form>
                     <label class="f3-text">Full Name</label>
                     <input type="text" placeholder="eg: John Doe">
                     <label class="f3-text">Email</label>
                     <input type="email" placeholder="eg: john@email.com">
                     <label class="f3-text">Phone Number</label>
-                    <div>
-                      <input type="text" placeholder="+971" style="width: 20%; margin-right: 5px;">
-                      <input type="text" placeholder="543210987" style="width: 77%;">
+                    <div >
+                        <div style="display: flex; align-items: center; gap: 1%; width: 100%;" >
+                            <!-- Dropdown with custom arrow -->
+                            <div style="position: relative; width: 100px; display: inline-block; ">
+                              <select style="width: 100%; color: black; padding: 10px; appearance: none; -webkit-appearance: none; -moz-appearance: none; " class="select3">
+                                <option value="+971" selected>+971</option>
+                                <option value="+1">+1</option>
+                                <option value="+44">+44</option>
+                                <option value="+91">+91</option>
+                              </select>
+                              <!-- Custom SVG icon -->
+                              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                style="position: absolute; top: 35%; right: 10px; transform: translateY(-50%); pointer-events: none;">
+                                <path d="M18.266 8.65967L11.6379 15.2878L5.00977 8.65967" stroke="#111827"
+                                  stroke-width="1.89375" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </div>
+                            
+                            <!-- Input field -->
+                            <input type="text" style="width: 80%; color: black;" placeholder="Enter your number">
+                          </div>
+                          
+                       
                     </div>
                     <label class="f3-text">Available Date</label>
                     <div class="custom-select">
-                        <input id="datePicker" class="form-control" placeholder="Select date and time" />
-                       
-                      </div>
-                         <label for="services">Select Service</label>
-            
-                                    <div class="custom-select">
-                                      <select id="services">
-                                        <option value="">Website Development</option>
-                                        <option value="Mobile Application">Mobile Application</option>
-                                        <option value="E-Commerce">E-Commerce</option>
-                                        <option value="Digital Marketing">Digital Marketing</option>
-                                        <option value="UI/UX">UI/UX</option>
-                                        <option value="Custom Application">Custom Application</option>
-                                      </select>
-                                   
-                                      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M18.266 8.65967L11.6379 15.2878L5.00977 8.65967" stroke="#111827" stroke-width="1.89375" stroke-linecap="round" stroke-linejoin="round" />
-                                      </svg>
-                                   
-                                    </div>
+                        <input id="datePicker" class="form-control"
+                            placeholder="Select date and time" />
+
+                    </div>
+                    <label for="services">Select Service</label>
+
+                    <div class="custom-select">
+                        <select id="services">
+                            <option value="">Website Development</option>
+                            <option value="Mobile Application">Mobile Application</option>
+                            <option value="E-Commerce">E-Commerce</option>
+                            <option value="Digital Marketing">Digital Marketing</option>
+                            <option value="UI/UX">UI/UX</option>
+                            <option value="Custom Application">Custom Application</option>
+                        </select>
+
+                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.266 8.65967L11.6379 15.2878L5.00977 8.65967" stroke="#111827"
+                                stroke-width="1.89375" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </div>
                     <label class="f3-text">Share Your Message</label>
                     <textarea placeholder="Message"></textarea>
-                    <button type="submit" class="lastbutton">Book Now</button>
-                  </form>
+                    <div class="pop-up-button">
+                    <button type="submit" class="lastbutton">Book Now <svg width="18" height="14" viewBox="0 0 18 14" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.6667 1.1665L16.5 6.99984M16.5 6.99984L10.6667 12.8332M16.5 6.99984H1.5"
+                    stroke="white" stroke-width="1.90476" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg></button>
                 </div>
-              </div>
-                            </div>
-                        </div>
-
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
              
 
@@ -1524,7 +1578,7 @@
                 </div>
                 <div class="sec10-boxs">
                     <div class="sec10-box1">
-                        <h4 class="sec10-con-heading">Book a 30-minute chat to understand the advantage</h4>
+                        <h4 class="sec10-con-heading">Book your 30-minute chat</h4>
                         <p class="sec10-con-text">One of our team members is just a Zoom call away.</p>
                         <button class="sec10-btn-two"  onclick="openPopup()"> <p class="sec10-ptag">Book a meeting </p>
                             <svg width="47" height="48" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1542,9 +1596,9 @@
     
                     </div>
                     <div class="sec10-box2">
-                        <h4 class="sec10-con-heading">Seekneo works efficiently to deliver</h4>
+                        <h4 class="sec10-con-heading">How Seekneo works</h4>
                         <p class="sec10-con-text2">You can know more about us & on how we can work together</p>
-                        <button class="sec10-btn-two"  onclick="openPopup()"> <p class="sec10-ptag">Enquire Now</p>
+                        <button class="sec10-btn-two1" > <p class="sec10-ptag">How we work</p>
                             <svg width="47" height="48" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 23.8062C0 10.8828 10.4765 0.40625 23.4 0.40625C36.3235 0.40625 46.8 10.8828 46.8 23.8062C46.8 36.7297 36.3235 47.2062 23.4 47.2062C10.4765 47.2062 0 36.7297 0 23.8062Z" fill="white"/>
                             <g clip-path="url(#clip0_229_1904)">
@@ -1850,7 +1904,7 @@
         </button>
         <div class="sec17-background">
            
-            <img src="./assets/Frame348.svg" alt="Logo 2" />
+            <img src="./assets/Frame2345.svg" alt="Logo 2" />
         </div>
         </div>
     
@@ -1948,10 +2002,18 @@
     <h2 class="sec14-heading">Get in touch with us <br/> Here to guide you thoroughly</h2>
     </div>
     <div class="sec14-iconcontent">
-        <img src="./assets/fb.svg" alt="Logo 2" /> 
+        <a href="https://www.facebook.com/SeekNeoITSolutions" target="_blank" style="text-decoration: none;">
+            <img src="./assets/fb.svg" alt="Logo 2" />
+        </a>  
+
+        <a href="https://www.instagram.com/seekneoitsolutions/" target="_blank" style="text-decoration: none;">
         <img src="./assets/insta.svg" alt="Logo 2" /> 
+    </a> 
+
+     <a href="https://x.com/i/flow/login?redirect_after_login=%2Fseekneoit" target="_blank" style="text-decoration: none;">
         <img src="./assets/twitter.svg" alt="Logo 2" /> 
-    </div>
+        </a>
+    </div>
 
 </div>
 <div class="sec14-formcontainer">
@@ -2060,7 +2122,7 @@
         applications and designs.</p>
     </div>
     <div class="sec16-iconcontent">
-        <button class="btn16-sec16"  onclick="openPopup()"><p class="btn-sec13">Enquire Now</p> 
+        <button class="btn16-sec16"><p class="btn-sec13">Enquire Now</p> 
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="black"/>
             <path d="M14.0211 12.7727L13.798 7.10815C13.7915 7.00261 13.7643 6.89775 13.7179 6.79958C13.629 6.60182 13.4682 6.44104 13.2705 6.35212C13.1723 6.30574 13.0675 6.27855 12.9619 6.27209L7.29738 6.04892C7.19175 6.04476 7.08797 6.06145 6.99198 6.09803C6.89598 6.1346 6.80964 6.19036 6.73789 6.26211C6.59299 6.40701 6.5163 6.60827 6.52471 6.8216C6.53311 7.03493 6.62592 7.24286 6.78271 7.39965C6.9395 7.55644 7.14743 7.64925 7.36076 7.65765L11.0935 7.79906L6.41933 12.4732C6.27502 12.6175 6.19864 12.8179 6.20701 13.0304C6.21539 13.2429 6.30781 13.4499 6.46396 13.6061C6.62012 13.7623 6.8272 13.8547 7.03966 13.863C7.25212 13.8714 7.45256 13.795 7.59687 13.6507L12.271 8.9766L12.4124 12.7093C12.4161 12.815 12.4408 12.9206 12.4849 13.02C12.529 13.1194 12.5918 13.2106 12.6695 13.2883C12.7472 13.366 12.8384 13.4287 12.9378 13.4729C13.0371 13.517 13.1427 13.5416 13.2485 13.5454C13.3542 13.55 13.4582 13.5336 13.5544 13.4972C13.6506 13.4607 13.7371 13.405 13.809 13.3332C13.8808 13.2613 13.9365 13.1748 13.9729 13.0786C14.0094 12.9824 14.0257 12.8785 14.0211 12.7727Z" fill="#16121E"/>
@@ -2079,7 +2141,7 @@
     <div class="footer-component">
 <div class="logo-container-footer">
     <img src="./assets/logo2.png" alt="Logo 4" />
-    <p class="footer-text">Companies that can help you in develop your website for the future that drive results from today.</p><br/><br/>
+    <p class="footer-text">Companies that can help you in develop your website for the future that drive results from today.</p><br/>
     <a href="tel:+918050717122" style="text-decoration: none; color: inherit;">
     <p class="footer-text1">
 
@@ -2088,7 +2150,7 @@
             <path d="M10.542 5.00024C12.7326 5.00024 13.667 5.89724 13.667 8.00024H15.7503C15.7503 4.77524 13.9013 3.00024 10.542 3.00024V5.00024ZM14.1065 10.4432C13.9064 10.2686 13.6434 10.1754 13.373 10.1835C13.1027 10.1915 12.8461 10.3001 12.6576 10.4862L10.1649 12.9472C9.56488 12.8372 8.35863 12.4762 7.11696 11.2872C5.87529 10.0942 5.49925 8.93324 5.38779 8.36124L7.94925 5.96724C8.14343 5.78637 8.25669 5.54006 8.26505 5.28045C8.27341 5.02083 8.17622 4.76828 7.99404 4.57624L4.14509 0.513239C3.96284 0.320596 3.70954 0.203743 3.43899 0.187499C3.16845 0.171254 2.90196 0.256897 2.69613 0.426239L0.435711 2.28724C0.255618 2.46075 0.148127 2.69169 0.133627 2.93624C0.118002 3.18624 -0.179914 9.10824 4.60342 13.7022C8.77633 17.7072 14.0034 18.0002 15.443 18.0002C15.6534 18.0002 15.7826 17.9942 15.817 17.9922C16.0717 17.9786 16.3121 17.8749 16.492 17.7012L18.4295 15.5302C18.606 15.3328 18.6954 15.077 18.6786 14.8173C18.6619 14.5576 18.5404 14.3143 18.3399 14.1392L14.1065 10.4432Z" fill="white"/>
           </svg>
           +91 8050717122
-       </p></a> <br/>
+       </p></a> 
        <a href="mailto:business@seeckneo.com" style="text-decoration: none; color: inherit;">
        <p class="footer-text1">
      
@@ -2097,7 +2159,7 @@
           </svg>
           business@seeckneo.com
       
-      </p>  </a><br/>  
+      </p>  </a>  
       <a href="mailto:business@seeckneo.com" style="text-decoration: none; color: inherit;">
           <p class="footer-text">
             <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2153,57 +2215,165 @@
     </a>
     
         </div>
-        <p class="footer-last-text"> © 2023 Seekneo. All rights reserved.</p>
+        <p class="footer-last-text"> © 2024 Seekneo. All rights reserved.</p>
         <div></div>
     </div> 
    
 </div>
 
- </div>
+<div class="icons-container">
+
+    <div class="station">
+        <a href="https://wa.me/918050717122" target="_blank" style="text-decoration: none;">
+        <img src="./assets/R.png" alt="Pinterest" class="main-icon" />
+        </a>
+        <div class="social-icons">
+            <a href="mailto:info@seekneo.com" style="text-decoration: none;">
+                <img src="./assets/fse.png" alt="Instagram" class="social-icon"/>
+                </a>
+                <a href="tel:+91 8050717122" style="text-decoration: none;">
+                <img src="./assets/phonecall.png" alt="Instagram"  class="social-icon"/>
+                </a>
+            
+        </div>
+
+    </div>
+</div>
+
+<div class="enquiry-container">
+    <div class="state">
+        <!-- Image that triggers the popup -->
+        <img src="./assets/quicken1.png" alt="Pinterest" class="enquiry-trigger" style="width: 35px; height: 200px;" />
+
+    </div>
+</div>
+
+<!-- Popup form -->
+<div class="enquiry-popup hidden">
+    <div class="popup-header">
+        <h3>Quick Enquiry</h3>
+        <!-- Close button -->
+        <button class="close-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 20L4 4M20 4L4 20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            </button>
+    </div>
+    <form class="enquiry-form">
+        <input type="text" class="form-input name-input" placeholder="Full Name" required />
+        <input type="email" class="form-input email-input" placeholder="Email address" required />
+        <input type="tel" class="form-input phone-input" placeholder="Phone number" required />
+        <textarea id="message"  class="form-input message-input"  placeholder="Message"></textarea>
+        <button type="submit" class="form-button submit-button">Submit</button>
+    </form>
+</div>
 
 
- <script>
-   
 
-    document.addEventListener('DOMContentLoaded', function() {
-const accordionItems = document.querySelectorAll('.aligned');
+</div>
 
-accordionItems.forEach(item => {
-    const header = item.querySelector('.content');
-    const content = item.querySelector('.answer');
 
-    header.addEventListener('click', function() {
-        // Toggle the active class on the accordion item
-        item.classList.toggle('active');
+<script>
 
-        // Toggle the display of the content
-        if (content.style.display === 'block') {
-            content.style.display = 'none';
-        } else {
-            content.style.display = 'block';
-        }
-        const img = this.querySelector('img');
-        if (isActive) {
-            img.src = "Assets/minus.png"; // Assuming minus.png is your minus image
-        } else {
-            img.src = "Assets/pius.svg"; // Assuming plus.png is your plus image
-        }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const accordionItems = document.querySelectorAll('.aligned');
+
+    accordionItems.forEach(item => {
+        const header = item.querySelector('.content');
+        const content = item.querySelector('.answer');
+
+        header.addEventListener('click', function () {
+            // Toggle the active class on the accordion item
+            item.classList.toggle('active');
+
+            // Toggle the display of the content
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+            const img = this.querySelector('img');
+            if (isActive) {
+                img.src = "Assets/minus.png"; // Assuming minus.png is your minus image
+            } else {
+                img.src = "Assets/pius.svg"; // Assuming plus.png is your plus image
+            }
+        });
     });
-});
 });
 
 </script>
+
 <script>
-    function openPopup() {
-      document.getElementById('popupForm').style.display = 'flex';
+function openPopup() {
+    document.getElementById('popupForm').style.display = 'flex';
+}
+
+function closePopup() {
+    document.getElementById('popupForm').style.display = 'none';
+}
+</script>
+
+<script>
+function toggleEnquiryForm() {
+const enquiryForm = document.getElementById('enquiry-form');
+enquiryForm.classList.toggle('hidden');
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+<script>
+flatpickr("#datePicker", {
+    enableTime: true, // Enables time selection
+    dateFormat: "Y-m-d H:i", // Date format with time
+    time_24hr: true // 24-hour time format
+});
+</script>
+
+
+<script>
+// Flag to check if the pop-up has been shown via scroll
+let popupShownViaScroll = false;
+
+// Function to show the pop-up
+function showPopup() {
+document.querySelector('.enquiry-popup').classList.remove('hidden');
+document.querySelector('.enquiry-popup').classList.add('visible');
+}
+
+// Add event listener for the enquiry trigger image (click trigger)
+document.querySelector('.enquiry-trigger').addEventListener('click', showPopup);
+
+// Add event listener for the new button to open the pop-up
+document.querySelector('.btn16-sec16').addEventListener('click', showPopup);
+document.querySelector('.btn-sec4').addEventListener('click', showPopup);
+document.querySelector('.sec10-btn-two1').addEventListener('click', showPopup);
+document.querySelector('.btn16-sec16').addEventListener('click', showPopup);
+
+
+
+// Add event listener for the close button
+document.querySelector('.close-btn').addEventListener('click', () => {
+document.querySelector('.enquiry-popup').classList.remove('visible');
+document.querySelector('.enquiry-popup').classList.add('hidden');
+});
+
+// Add scroll-based functionality
+let scrollCounter = 0;
+
+window.addEventListener('scroll', () => {
+if (!popupShownViaScroll) {
+    scrollCounter++;
+    if (scrollCounter >= 50) { // Open pop-up after 2 scrolls
+        showPopup();
+        popupShownViaScroll = true; // Set scroll-based flag to true
     }
-
-    function closePopup() {
-      document.getElementById('popupForm').style.display = 'none';
-    }
-  </script>
-  
-
-
+}
+});
+</script>     
 </body>
+
 </html>
