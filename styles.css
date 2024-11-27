@@ -5441,11 +5441,20 @@ margin-top: 10px;
             
         }
     }
-    /* @media (max-width:1028px) {
+    @media (max-width:1028px) {
         .social-icon {
             opacity: 1;
         }
-    } */
+        .social-icon {
+            width: 40px;
+            margin-top: 2px;
+        }
+        .main-icon {
+            width: 40px;
+            margin-top: 2px;
+        }
+       
+    }
     
     
     
@@ -5601,4 +5610,5 @@ margin-top: 10px;
         .enquiry-popup {
             right: 0%;
         }
+        
     }
