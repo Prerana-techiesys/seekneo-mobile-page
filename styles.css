@@ -5460,11 +5460,14 @@ margin-top: 10px;
     
     
     
+  
+
+    
     
     .enquiry-container{
         color: white;
         position: fixed; /* Fixes the element relative to the viewport */
-        top: 35vh; /* Optional: Ensures it starts from the top of the viewport */
+        top: 30vh; /* Optional: Ensures it starts from the top of the viewport */
         right: 0px; /* Optional: Ensures it starts from the left of the viewport */
         display: flex;
         justify-content: left;
@@ -5485,132 +5488,199 @@ margin-top: 10px;
     .state:hover {
         background-color: rgb(0, 0, 0); /* Change this to your desired hover color */
     }
-    .enquiry-popup {
-        display: none; /* Hidden by default */
-        position: fixed;
-        top: 15%;
-        right: 1%;
+   
+.enquiry-popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 5%;
+    right: 1%;
+    transform: translateX(100%); /* Start off the screen */
+   
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.719);
+    /* border-radius: 0px; */
+    z-index: 1000;
+    padding: 20px;
+    animation: slideIn 0.5s ease forwards; /* Add the animation */
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+/* Keyframes for the sliding animation */
+@keyframes slideIn {
+    0% {
         transform: translateX(100%); /* Start off the screen */
-       
-        width: 100%;
-        max-width: 400px;
-        background-color: white;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.719);
-        border-radius: 10px;
-        z-index: 1000;
-        padding: 20px;
-        animation: slideIn 0.5s ease forwards; /* Add the animation */
     }
-    
-    .overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 999;
-      }
-    /* Keyframes for the sliding animation */
-    @keyframes slideIn {
-        0% {
-            transform: translateX(100%); /* Start off the screen */
-        }
-        100% {
-            transform: translateX(0); /* Move into position */
-        }
+    100% {
+        transform: translateX(0); /* Move into position */
     }
-    
-    .popup-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 15px;
-    }
-    
-    .popup-header h3 {
-        margin: 0;
-    }
-    
-    .close-btn {
-        background: none;
-        border: none;
-        font-size: 18px;
-        cursor: pointer;
-    }
-    
-    /* General styles for all form inputs */
-    .form-input {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 14px;
-        color: #000;
-    }
-    
-    /* Specific styles for the name input */
-    .name-input {
-        background-color: #f9f9f9;
-    }
-    
-    /* Specific styles for the email input */
-    .email-input {
-        border-color: #28a745;
-    }
-    
-    
-    .phone-input {
-      
-        color: #000;
-    }
-    
-    /* Styles for the select dropdown */
-    .form-select {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 14px;
-        color: black;
-    }
-    
-    /* Styles for the submit button */
-    .form-button {
-        background-color: #28a745;
-        color: white;
-        border: none;
-        padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-    
-    .submit-button {
-        background-color: #113f26; /* Specific color for this button */
-        transition: background-color 0.3s;
-        width: 100%;
-    }
-    
-    .submit-button:hover {
-        background-color: #285e3b;
-    }
-    
-    /* To hide and show the popup */
-    .hidden {
-        display: none;
-    }
-    
-    .visible {
-        display: block;
-    }
-    
-    @media (max-width:403px) {
+}
+
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    flex-direction: column;
+    padding: 0px 30px;
+  
+  }
+
+  .range {
+    margin: 0;
+    font-size: 27px;
+    letter-spacing: -1px;
+    font-weight: bold;
+    line-height: 50px;
+    margin-top: 15px;
+  }
+  .form-input:focus {
+    outline: none;
+    /* border: none;  */
+}
+
+
+  .popup-description {
+    font-size: 16px;
+    color: #000000;
+    /* margin-bottom: 20px; */
+    line-height: 25px;
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .enquiry-form{
+    padding: 0px 30px;
+  }
+
+/* General styles for all form inputs */
+.form-input {
+    width: 100%;
+    padding: 10px 0px;
+    /* margin: 8px 0; */
+    border: none;
+    border-radius: 0px;
+    border-bottom:4px solid rgb(174, 173, 173) ;
+    font-size: 18px;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    /* margin-top: 1rem; */
+  }
+  .name-label {
+    font-size: 16px; /* Adjust the font size as needed */
+    font-weight:500; /* Optional for bold text */
+    color: #000000; /* Optional for text color */
+  }
+  textarea.form-input {
+    height: 80px;
+    padding: 10px 0px;
+    resize: none;
+  }
+
+/* Specific styles for the name input */
+.name-input {
+    background-color: #f9f9f9;
+}
+
+/* Specific styles for the email input */
+.email-input {
+    border-color: #09230f;
+}
+
+
+.phone-input {
+  
+    color: #000;
+}
+
+/* Styles for the select dropdown */
+.form-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: black;
+}
+
+/* Styles for the submit button */
+.btn-last45{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-button {
+    width: 90%;
+    padding: 15px;
+    background-color: white;
+    border: 4px solid black;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: black;
+  }
+
+.form-button:hover {
+    background-color: #f0f0f0;
+  }
+
+
+
+/* To hide and show the popup */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+.close-btn12 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    background: none;
+    border: 2px solid black;
+    color: #fff;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #000;
+  }
+    @media (max-width:420px) {
         .enquiry-popup {
             right: 0%;
         }
-        
+        .range {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: -1px;
+            font-weight: bold;
+            line-height: 50px;
+            margin-top: 15px;
+          }
+          .form-button {
+ 
+            color: black;
+          }
     }
